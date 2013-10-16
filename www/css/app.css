@@ -1,0 +1,286 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  color: #fff;
+}
+
+.back-icon {
+  background: url("../img/back.svg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.settings-icon {
+  background: url("../img/settings.svg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+#view-container {
+  position: relative;
+}
+
+/* Pedometer */
+#steps {
+  font-size: 300%;
+  margin: 5%;
+  width: 90%;
+  text-align: center;
+}
+#acceleration-label,
+#acceleration {
+  margin: 0 5%;
+  width: 90%;
+  text-align: center;
+}
+#actions {
+  width: 100%;
+  margin: 5%;
+}
+#reset,
+#toggle {
+  width: 35%;
+  margin: 0 5%;
+}
+#reset,
+#reset:hover,
+#reset:active,
+#reset:focus {
+  border: 1px solid #503214;
+  background-color: #ec514e;
+}
+
+
+/* Geolocation */
+#geoloc {
+  margin: 10% 0;
+  text-align: center;
+  font-size: 200%;
+}
+#geoloc-check {
+  text-align: center;
+}
+#geoloc-update {
+  width: 70%;
+  margin: 0 10%;
+}
+
+/* Slides */
+
+
+.slide-rtl.ng-enter, .slide-rtl.ng-leave,
+.slide-ltr.ng-enter, .slide-ltr.ng-leave {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.slide-rtl.ng-enter {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-animation: 0.3s slide-rtc;
+  -moz-animation: 0.3s slide-rtc;
+  -o-animation: 0.3s slide-rtc;
+  animation: 0.3s slide-rtc;
+}
+
+.slide-rtl.ng-leave {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-animation: 0.3s slide-rtl-leave;
+  -moz-animation: 0.3s slide-rtl-leave;
+  -o-animation: 0.3s slide-rtl-leave;
+  animation: 0.3s slide-rtl-leave;
+}
+
+
+.slide-ltr.ng-enter {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-animation: 0.3s slide-ltr-enter;
+  -moz-animation: 0.3s slide-ltr-enter;
+  -o-animation: 0.3s slide-ltr-enter;
+  animation: 0.3s slide-ltr-enter;
+}
+
+.slide-ltr.ng-leave {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-animation: 0.3s slide-ltr-leave;
+  -moz-animation: 0.3s slide-ltr-leave;
+  -o-animation: 0.3s slide-ltr-leave;
+  animation: 0.3s slide-ltr-leave;
+}
+
+
+
+/* keyframes */
+
+@keyframes slide-rtc {
+  from {
+    z-index: 100;
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-rtl-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes slide-rtc {
+  from {
+    z-index: 100;
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slide-rtl-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@-moz-keyframes slide-rtc {
+  from {
+    z-index: 100;
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-moz-keyframes slide-rtl-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@-o-keyframes slide-rtc {
+  from {
+    z-index: 100;
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-o-keyframes slide-rtl-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+
+/* Ltr */
+
+@keyframes slide-ltr-enter {
+  from {
+    z-index: 100;
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-ltr-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes slide-ltr-enter {
+  from {
+    z-index: 100;
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slide-ltr-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-moz-keyframes slide-ltr-enter {
+  from {
+    z-index: 100;
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-moz-keyframes slide-ltr-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-o-keyframes slide-ltr-enter {
+  from {
+    z-index: 100;
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-o-keyframes slide-ltr-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}

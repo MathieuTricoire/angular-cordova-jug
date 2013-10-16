@@ -1,0 +1,15 @@
+<h2>Dot step: {{pedometer.dotStep | number:2}}</h2>
+<br />
+<div>
+  <input type="range" ng-model="pedometer.dotStep" min="0.0" max="1.0" step="0.01" class="topcoat-range" style="width: 100%" />
+</div>
+
+<br />
+<br />
+
+<h2>Watch Frequency: {{pedometer.frequency}}</h2>
+<br />
+<div>
+  <input type="range" ng-model="pedometer.frequency" min="100" max="1200" step="50" class="topcoat-range" style="width: 100%" />
+</div>
+

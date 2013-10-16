@@ -1,0 +1,28 @@
+<h1 id="steps" ng-bind="pedometer.steps"></h1>
+
+<h2 id="acceleration-label">Acceleration</h2>
+<table id="acceleration">
+  <tr>
+    <td>X</td>
+    <td ng-bind="pedometer.acceleration.x | number:2"></td>
+    <td>PX</td>
+    <td ng-bind="pedometer.pAcceleration.x | number:2"></td>
+  </tr>
+  <tr>
+    <td>Y</td>
+    <td ng-bind="pedometer.acceleration.y | number:2"></td>
+    <td>PY</td>
+    <td ng-bind="pedometer.pAcceleration.y | number:2"></td>
+  </tr>
+  <tr>
+    <td>Z</td>
+    <td ng-bind="pedometer.acceleration.z | number:2"></td>
+    <td>PZ</td>
+    <td ng-bind="pedometer.pAcceleration.z | number:2"></td>
+  </tr>
+</table>
+
+<div id="actions">
+  <button id="reset" ng-click="resetSteps()" class="topcoat-button--large--cta">RESET</button>
+  <button id="toggle" ng-click="pedometer.toggle()" ng-bind="action()" class="topcoat-button--large--cta"></button>
+</div>
